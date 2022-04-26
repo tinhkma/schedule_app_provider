@@ -1,0 +1,17 @@
+final double dp0 = 0;
+final double dp1 = 1;
+final double dp2 = 2;
+final double dp3 = 3;
+final double dp4 = 4;
+final double dp5 = 5;
+final double dp6 = 6;
+final double dp7 = 7;
+final double dp8 = 8;
+final double dp9 = 9;
+final double dp10 = 10;
+final double dp11 = 11;
+final double dp12 = 12;
+final double dp13 = 13;
+final double dp14 = 14;
+final double dp15 = 15;
+final double dp16 = 16;
