@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:schedule_provider/locator.dart';
+import 'package:schedule_provider/view_models/login_screen_viewmodel.dart';
 
 void main() {
-  runApp(const MyApp());
+  setupServiceLocator();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SChedule Provider',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -30,11 +32,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  LoginScreenViewModel model = getIt<LoginScreenViewModel>();
 
   void _incrementCounter() {
     setState(() {
       _counter++;
     });
+  }
+
+  @override
+  void initState() {
+    print("xxxxxxxx initState");
+    model.loadData();
+    super.initState();
   }
 
   @override
